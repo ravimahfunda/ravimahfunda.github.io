@@ -1,0 +1,246 @@
+.primary{
+    background: pink;
+}
+
+.container{
+    max-width: 960px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+/* ================ NAV BAR ============== */
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    background: white;
+    margin: 0 auto;
+    top: 0;
+    z-index: 2;
+    padding-top: 12px;
+}
+
+.nav-brand{
+    font-family: Lora, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0;
+}
+
+.nav-menu-group{
+    padding: 12px;
+}
+
+.nav-menu{
+    float: right;
+    width: 100px;
+    position: float;
+    font-family: Raleway;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.46);
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-menu .menu-indicator{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 3px;
+    margin: 2px 6px;
+    background: #E92165;
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-menu:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-menu:hover .menu-indicator{
+    width: 6px;
+    height: 6px;
+}
+
+.nav-menu-active{
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-menu-active .menu-indicator{
+    color: rgba(0, 0, 0, 1);
+    width: 6px;
+    height: 6px;
+}
+
+.btn{
+    height: 60px;
+    min-width: 218px;
+    padding: 14px 32px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.btn-primary{
+    background-color: #E92165;
+    color: white;
+    border: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: #CC1050;
+    color: white;
+}
+
+.section{
+    width: 100%;
+}
+
+.section-hero{
+    
+}
+
+.hero-image{
+    width: 581px;
+    height: 383px;
+    object-fit: cover;
+    background: #C4C4C4;
+    border-radius: 0px 83px 0px 0px;
+    transform: translate(68px,0);
+}
+
+.hero-content{
+    
+}
+
+.hero-title{
+    font-family: Lora;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 150%;
+}
+
+.hero-subtitle{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+
+.section-portfolios{
+    margin: 64px 0;
+}
+.section-stories{
+    background-color: aqua;
+}
+.section-contacts{
+    background-color: blueviolet;
+}
+
+.portfolio-grid{
+    padding: 0 12px;
+}
+
+.portfolio-item{
+    position: relative;
+    margin-bottom: 24px;
+}
+
+
+.portfolio-image{
+    object-fit: cover;
+    width: 100%;
+    min-height: 250px;
+    margin: 0;
+}
+
+.portfolio-content{
+    position: absolute;
+    padding: 32px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    background-color: #E92165;
+    margin: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+.portfolio-item:hover .portfolio-content{
+    height: 100%;
+    opacity: 1;
+}
+
+.portfolio-title{
+    font-family: Lora;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.portfolio-subtitle{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    max-height: 72px;
+    max-lines: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}
+
+.portfolio-button{
+    background: none;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-top: 24px;
+}
+
+.portfolio-button-indicator{
+    display: inline-block;
+    margin-right: 4px;
+    width: 5px;
+    height: 5px;
+    background: white;
+    transition:  all ease-in-out 0.3s;
+}
+
+.portfolio-button:hover .portfolio-button-indicator{
+    width: 56px;
+}

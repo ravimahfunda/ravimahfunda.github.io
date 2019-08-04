@@ -12,7 +12,7 @@
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,52 +29,58 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <link rel="stylesheet" href="jquery.horizontal.scroll.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+          integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+          crossorigin="anonymous">
+  </script>
+  <script src="jquery.horizontal.scroll.js"></script>
+
 </head>
 
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navbar">
+  <div class="navbar" data-scroll-header>
     <div class="container">
-      <div class="row middle-lg between-lg">
-        <div class="col-lg-6" style="margin-top: 16px">
-          <h5 class="nav-brand">Ravi Mahfunda</h5>
+      <div class="row middle-md between-md">
+        <div class="col-md-6 col-xs-12" style="margin-top: 16px">
+          <div class="row start-md center-xs"><h5 class="nav-brand col">Ravi Mahfunda</h5></div>
         </div>
-        <div class="col-lg-6" style="margin-top: 16px">
-          <div class="row nav-menu-group end-lg">
-            <div class="nav-menu nav-menu-active">
+        <div class="col-md-6 col-xs-12" style="margin-top: 16px">
+          <div id="nav-menu-group" class="row nav-menu-group end-md center-xs">
+            <a class="nav-menu nav-menu-active" data-scroll href="#hero">
               <div class="menu-indicator"></div>Portfolios
-            </div>
-            <div class="nav-menu">
+            </a>
+            <a class="nav-menu" data-scroll href="#stories">
               <div class="menu-indicator"></div>Stories
-            </div>
-            <div class="nav-menu">
+            </a>
+            <a class="nav-menu" data-scroll href="#contacts">
               <div class="menu-indicator"></div>Contacts
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container" style="margin-top: 144px;">
-    <div id="hero" class="row section section-hero middle-lg">
-      <img class="hero-image"
+    <div id="hero" class="row section section-hero middle-md start-md center-xs">
+      <img class="hero-image col-md-7 col-xs-12"
         src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-      <div class="hero-content col-lg first-lg">
-
+      <div class="hero-content first-md col-md col-xs-12">
         <h1 class="hero-title">Lily Chatbot</h1>
         <p class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel pellentesque lacus.
           Vivamus mauris magna,</p>
-        <button class="btn btn-primary">Read More</button>
+        <a href="" target="_blank"><button class="btn btn-primary">Read More</button></a>
       </div>
     </div>
     <div id="portfolios" class="row section section-portfolios">
-      <div class="col-lg-4 portfolio-grid">
+      <div class="col-md-4 col-xs-12 portfolio-grid">
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -87,7 +93,7 @@
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -98,11 +104,11 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 portfolio-grid">
+      <div class="col-md-4 col-xs-12 portfolio-grid">
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -115,7 +121,7 @@
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -126,11 +132,11 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 portfolio-grid">
+      <div class="col-md-4 col-xs-12 portfolio-grid">
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -143,7 +149,7 @@
         <div class="portfolio-item">
           <img class="portfolio-image"
             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-lg">
+          <div class="portfolio-content row bottom-md">
             <div>
               <p class="portfolio-title">Lily Chatbot</p>
               <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
@@ -156,16 +162,137 @@
       </div>
     </div>
     <div id="stories" class="row section section-stories">
-
+      <div class="col-xs-12">
+      <div class="stories-label row start-lg center-xs">
+        <div class="divider"></div>
+        <div class="col-xs stories-caption">Stories</div>
+      </div>
     </div>
-    <div id="contacts" class="row section section-contacts">
-
+    <div class="col-xs-12">
+      <div id="stories-list" class="row">
+      </div>
+    </div>
+  </div>
+    <div id="contacts" class="section section-contacts">
+        <div class="row center-xs">
+          <div class="col item-contact"><a>LinkedIn</a></div>
+          <div class="col item-contact"><a>Dribbble</a></div>
+          <div class="col item-contact"><a>Medium</a></div>
+          <div class="col item-contact"><a>Instagram</a></div>
+        </div>
+        <div class="row center-xs" style="margin-top: 24px">
+          <div class="col-xs">Ravi Mahfunda <span class="accent-indicator"></span> 2019</div>
+        </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]',{
+      speed: 1500,
+	    speedAsDuration: true,
+      // header: '[data-scroll-header]',
+      offset: 160,
+    });
+
+    $(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            $(document).off("scroll");
+            
+            $('a').each(function () {
+                $(this).removeClass('nav-menu-active');
+            })
+            $(this).addClass('nav-menu-active');
+          
+            // var target = this.hash,
+            //     menu = target;
+            // $target = $(target);
+            // $('html, body').stop().animate({
+            //     'scrollTop': $target.offset().top+2
+            // }, 1000, 'swing', function () {
+            //     window.location.hash = target;
+            //     $(document).on("scroll", onScroll);
+            // });
+        });
+    });
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('#nav-menu-group a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('#nav-menu-group a').removeClass("nav-menu-active");
+                currLink.addClass("nav-menu-active");
+            }
+            else{
+                currLink.removeClass("nav-menu-active");
+            }
+        });
+    }
+
+
+    // ============ CONTENT JSON ===============
+    let hero = {
+      title: "RelieveID",
+      description: "Relieve hadir sebagai mitra pemerintah dalam media penyampaian informasi terhadap penanggulangan bencana.",
+      url: "https://relieve.id/",
+      image: "/images/relieve.png",
+    }
+
+    let portfolios = {
+      
+    }
+
+    let stories = [
+      {
+        title: "Creating a Brand in Magnum Steps",
+        description: "Brand sendiri merupakan tatanan dan ketentuan yang menentukan arahan dan citra dari sebuah entitas.",
+        url: "https://medium.com/chevalier-lab/creating-a-brand-in-magnum-steps-897b6fe3eef8",
+        image: "https://miro.medium.com/max/700/0*J87OzKL50uYal2g7",
+      },
+      {
+        title: "Full-Stack Designer — apakah itu?",
+        description: "Kalian berasal dari latarbelakang teknologi dan merasa dilemma saat memilih jenjang karir selanjutnya?",
+        url: "https://medium.com/chevalier-lab/full-stack-designer-apakah-itu-4db15fc74b7e",
+        image: "https://miro.medium.com/max/700/1*ev4D1pXpC7_IwvXy1jB1BQ.jpeg",
+      },
+      {
+        title: "Carilah Mentor dan Jadilah Mentor!",
+        description: "Salah satu junior ku bertanya “kenapa sih kakak memperdulikan junior-junior yang bahkan tidak kenal kakak?”",
+        url: "https://medium.com/chevalier-lab/carilah-mentor-dan-jadilah-mentor-ec31fc511efe",
+        image: "https://miro.medium.com/max/700/1*lJG8qbjI7iv2-LfeOUtvSw.png",
+      },
+    ]
+
+    // ============ DOM MANIPULATION ===========
+
+    // Hero
+    $("#hero > img").attr("src", hero.image);
+    $("#hero .hero-title").text(hero.title);
+    $("#hero .hero-subtitle").text(hero.description);
+    $("#hero .hero-content > a").attr("href",hero.url);
+
+    // Stories
+    stories.forEach((s)=>
+    {
+      $("#stories-list").append(
+        `<div class="col-md-4 col-xs-12 stories-card">
+            <a href="${s.url}" target="_blank"><img class="stories-image" src="${s.image}" /></a>
+            <p class="stories-title">${s.title}</p>
+              <p class="stories-subtitle">${s.description}</p>
+              <a href="${s.url}" target="_blank"><button class="stories-button"><span class="stories-button-indicator"></span>Read More</button></a>
+          </div>`
+      );
+    });
+
+  </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/jump.js"></script>
 </body>
 
 </html>

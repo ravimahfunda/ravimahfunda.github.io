@@ -1,11 +1,12 @@
-.primary{
-    background: pink;
-}
-
 .container{
     max-width: 960px;
     padding: 16px;
     margin: 0 auto;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
 }
 
 /* ================ NAV BAR ============== */
@@ -46,6 +47,7 @@
     color: rgba(0, 0, 0, 0.46);
     cursor: pointer;
     transition: all ease-in-out 0.3s;
+    text-decoration: none;
 }
 
 .nav-menu .menu-indicator{
@@ -106,7 +108,8 @@
 }
 
 .section{
-    width: 100%;
+    padding: 2px;
+    position: relative;
 }
 
 .section-hero{
@@ -114,12 +117,14 @@
 }
 
 .hero-image{
-    width: 581px;
-    height: 383px;
     object-fit: cover;
-    background: #C4C4C4;
-    border-radius: 0px 83px 0px 0px;
-    transform: translate(68px,0);
+}
+
+@media only screen and (min-width: 800px) {
+    .hero-image {
+        transform: translateX(83px);
+        border-radius: 83px 0 0 0;
+    }
 }
 
 .hero-content{
@@ -132,6 +137,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 150%;
+    margin-top: 16;
 }
 
 .hero-subtitle{
@@ -141,16 +147,22 @@
     font-size: 18px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    margin-top: 8px;
+    margin-bottom: 32px;
 }
+
+
 
 .section-portfolios{
     margin: 64px 0;
 }
 .section-stories{
-    background-color: aqua;
+    padding-bottom: 70px;
+    overflow: visible;
 }
 .section-contacts{
-    background-color: blueviolet;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .portfolio-grid{
@@ -176,7 +188,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 0%;
+    height: 100%;
     opacity: 0;
     background-color: #E92165;
     margin: 0;
@@ -243,4 +255,129 @@
 
 .portfolio-button:hover .portfolio-button-indicator{
     width: 56px;
+}
+
+/* ============= STORIES =============== */
+.stories-label{
+    position: relative;
+    width: 36px;
+}
+
+.stories-caption {
+    margin-bottom: 32px;
+
+    font-family: Lora;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.divider{
+    height: 1.5px;
+    max-width: 180px;
+    background: #000;
+    display: block;
+}
+
+.stories-card{
+    padding-bottom: 64px;
+    transition: all ease-in-out 300ms;
+}
+
+.stories-card:hover{
+    transform: scale(1.05,1.05);
+}
+
+.stories-title{
+    font-family: Lora;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 16px 0;
+}
+
+.stories-subtitle{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    /* or 24px */
+    max-height: 72px;
+    max-lines: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.stories-button{
+    margin: 32px 0;
+    background: none;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+    letter-spacing: 0.01em;
+
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-top: 16px;
+}
+
+.stories-button-indicator{
+    display: inline-block;
+    margin-right: 4px;
+    width: 5px;
+    height: 5px;
+    background: #E92165;
+    transition:  all ease-in-out 0.3s;
+}
+
+.stories-button:hover .stories-button-indicator{
+    width: 56px;
+}
+
+.stories-image{
+    object-fit: cover;
+    width: 100%;
+    height: 233px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* ============ CONTACT ============= */
+.item-contact{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    transition: all ease-in-out 300ms;
+    margin: 0 16px;
+}
+
+.item-contact:hover{
+    color: #E92165;
+    cursor: pointer;
+}
+
+.accent-indicator{
+    display: inline-block;
+    margin: 2px;
+    border-radius: 3px;
+    height: 6px;
+    width: 6px;
+    background: #E92165;
 }

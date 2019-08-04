@@ -76,95 +76,14 @@
       </div>
     </div>
     <div id="portfolios" class="row section section-portfolios">
-      <div class="col-md-4 col-xs-12 portfolio-grid">
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
+      <div class="col-md col-xs portfolio-grid">
       </div>
-      <div class="col-md-4 col-xs-12 portfolio-grid">
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-12 portfolio-grid">
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://img.freepik.com/free-vector/futuristic-blurred-mobile-wallpaper-with-neon-light-shapes_79603-464.jpg?size=338&ext=jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img class="portfolio-image"
-            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/8EC5/production/_107194563_gettyimages-1129237482.jpg" />
-          <div class="portfolio-content row bottom-md">
-            <div>
-              <p class="portfolio-title">Lily Chatbot</p>
-              <p class="portfolio-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
-                pellentesque lacus.
-                Vivamus mauris magna,</p>
-              <button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
-            </div>
-          </div>
-        </div>
+      <div class="col-md col-xs portfolio-grid">
       </div>
     </div>
     <div id="stories" class="row section section-stories">
       <div class="col-xs-12">
       <div class="stories-label row start-lg center-xs">
-        <div class="divider"></div>
         <div class="col-xs stories-caption">Stories</div>
       </div>
     </div>
@@ -174,11 +93,7 @@
     </div>
   </div>
     <div id="contacts" class="section section-contacts">
-        <div class="row center-xs">
-          <div class="col item-contact"><a>LinkedIn</a></div>
-          <div class="col item-contact"><a>Dribbble</a></div>
-          <div class="col item-contact"><a>Medium</a></div>
-          <div class="col item-contact"><a>Instagram</a></div>
+        <div id="social-links" class="row center-xs">
         </div>
         <div class="row center-xs" style="margin-top: 24px">
           <div class="col-xs">Ravi Mahfunda <span class="accent-indicator"></span> 2019</div>
@@ -207,24 +122,14 @@
                 $(this).removeClass('nav-menu-active');
             })
             $(this).addClass('nav-menu-active');
-          
-            // var target = this.hash,
-            //     menu = target;
-            // $target = $(target);
-            // $('html, body').stop().animate({
-            //     'scrollTop': $target.offset().top+2
-            // }, 1000, 'swing', function () {
-            //     window.location.hash = target;
-            //     $(document).on("scroll", onScroll);
-            // });
         });
     });
 
     function onScroll(event){
-        var scrollPos = $(document).scrollTop();
-        $('#nav-menu-group a').each(function () {
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
+        var scrollPos = $(document).scrollTop()
+        $('#nav-menu-group a').each((a)=>{
+            let currLink = $(a);
+            let refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 $('#nav-menu-group a').removeClass("nav-menu-active");
                 currLink.addClass("nav-menu-active");
@@ -239,14 +144,49 @@
     // ============ CONTENT JSON ===============
     let hero = {
       title: "RelieveID",
-      description: "Relieve hadir sebagai mitra pemerintah dalam media penyampaian informasi terhadap penanggulangan bencana.",
-      url: "https://relieve.id/",
-      image: "/images/relieve.png",
+      description: "Relieve merupakan project open-source untuk sebuah aplikasi tanggap bencana yang dibuat khusus untuk keluarga Indonesia.",
+      url: "https://medium.com/@ravimahfunda/studi-kasus-desain-logo-relieveid-a18fcd41d32b?source=your_stories_page---------------------------",
+      image: "https://miro.medium.com/max/572/1*z6YzcoS3OkcxUznWOwrAcQ.png",
     }
 
-    let portfolios = {
-      
-    }
+    let portfolios = [
+      {
+        title: "BukaBuku",
+        description: "Brand sendiri merupakan tatanan dan ketentuan yang menentukan arahan dan citra dari sebuah entitas.",
+        url: "https://medium.com/chevalier-lab/studi-kasus-user-interface-bukabuku-66e158a65a32",
+        image: "https://miro.medium.com/max/688/0*4mbeGIJpKmiF8szv",
+      },
+      {
+        title: "Atraksi dan Event | tiket.com",
+        description: "Explorasi terhadap fitur Atraksi dan Event pada aplikasi mobile tiket.com.",
+        url: "https://medium.com/chevalier-lab/studi-kasus-ux-explorasi-fitur-atraksi-dan-event-aplikasi-tiket-com-576a64e4c6a2",
+        image: "/images/tiket.png",
+      },
+      {
+        title: "Milena - Mandiri Investment for Milenials",
+        description: "Aplikasi investasi untuk para milenial dengan fitur lifegoals dan Mandiri Payment",
+        url: "https://speakerdeck.com/ravimahfunda/mandiri-wth-milena",
+        image: "/images/milena.png",
+      },
+      {
+        title: "SatuAtap - Concept",
+        description: "Sebuah konsep aplikasi rental rumah dan kamar dengan pola showcase yang unik dan mekanisme filter.",
+        url: "https://dribbble.com/shots/4389870-Satu-Atap",
+        image: "/images/satuatap.png",
+      },
+      {
+        title: "Sabila Transport - Concept",
+        description: "Sebuah konsep aplikasi rental mobil untuk mendigitalisasi proses pemesanan dan transaksi.",
+        url: "#",
+        image: "/images/sabila.png",
+      },
+      {
+        title: "Hijabgood - Concept",
+        description: "Sebuah konsep aplikasi Single-Page marketplace untuk busana muslim.",
+        url: "https://dribbble.com/shots/6436016-Hijabgood-Single-Page-App-Concept",
+        image: "/images/hijabgood.png",
+      },
+    ]
 
     let stories = [
       {
@@ -269,6 +209,25 @@
       },
     ]
 
+    let socials = [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/ravimahfunda/",
+      },
+      {
+        name: "Medium",
+        url: "https://medium.com/@ravimahfunda",
+      },
+      {
+        name: "Dribbble",
+        url: "https://dribbble.com/ravimahfunda",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/ravimahfunda/",
+      },
+    ]
+
     // ============ DOM MANIPULATION ===========
 
     // Hero
@@ -282,11 +241,36 @@
     {
       $("#stories-list").append(
         `<div class="col-md-4 col-xs-12 stories-card">
+            <div class="stories-image-accent"></div>
             <a href="${s.url}" target="_blank"><img class="stories-image" src="${s.image}" /></a>
             <p class="stories-title">${s.title}</p>
               <p class="stories-subtitle">${s.description}</p>
               <a href="${s.url}" target="_blank"><button class="stories-button"><span class="stories-button-indicator"></span>Read More</button></a>
           </div>`
+      );
+    });
+
+    let gridList = $("#portfolios div");
+    portfolios.forEach((p, i)=>
+    {
+      $(gridList[i%gridList.length]).append(
+        `<div class="portfolio-item">
+          <img class="portfolio-image"
+            src="${p.image}" />
+          <div class="portfolio-content row bottom-md">
+            <div>
+              <a href="${p.url}" target="_blank" class="portfolio-title">${p.title}</a>
+              <p class="portfolio-subtitle">${p.description}</p>
+              <a href="${p.url}" target="_blank"><button class="portfolio-button"><span class="portfolio-button-indicator"></span>Read More</button>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+
+    socials.forEach((s)=>{
+      $("#social-links").append(
+        `<div class="col item-contact"><a target="_blank" href='${s.url}'>${s.name}</a></div>`
       );
     });
 

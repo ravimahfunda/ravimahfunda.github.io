@@ -138,6 +138,8 @@
     font-size: 36px;
     line-height: 150%;
     margin-top: 16;
+    max-height: 108px;
+    overflow: hidden;
 }
 
 .hero-subtitle{
@@ -149,6 +151,8 @@
     letter-spacing: 0.02em;
     margin-top: 8px;
     margin-bottom: 32px;
+    max-height: 81px;
+    overflow: hidden;
 }
 
 
@@ -157,12 +161,12 @@
     margin: 64px 0;
 }
 .section-stories{
+    margin-top: 35px;
     padding-bottom: 70px;
     overflow: visible;
 }
 .section-contacts{
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 140px;
 }
 
 .portfolio-grid{
@@ -178,7 +182,7 @@
 .portfolio-image{
     object-fit: cover;
     width: 100%;
-    min-height: 250px;
+    min-height: 300px;
     margin: 0;
 }
 
@@ -208,6 +212,7 @@
     line-height: 150%;
     color: #FFFFFF;
     margin: 0;
+    text-decoration: none;
 }
 
 .portfolio-subtitle{
@@ -260,20 +265,21 @@
 /* ============= STORIES =============== */
 .stories-label{
     position: relative;
-    width: 36px;
 }
 
 .stories-caption {
-    margin-bottom: 32px;
-
-    font-family: Lora;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 24px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
 
     text-align: center;
+    letter-spacing: 1em;
 
     color: #000000;
+    margin-bottom: 48px;
+    text-transform: uppercase;
 }
 
 .divider{
@@ -290,6 +296,19 @@
 
 .stories-card:hover{
     transform: scale(1.05,1.05);
+}
+
+
+.stories-image-accent{
+    background: #E92165;
+    height: 3px;
+    width: 0%;
+    transition: all ease-out 300ms;
+    margin: 0;
+}
+
+.stories-card:hover .stories-image-accent{
+    width: 100%;
 }
 
 .stories-title{
@@ -357,18 +376,19 @@
 }
 
 /* ============ CONTACT ============= */
-.item-contact{
+.item-contact a{
     font-family: Raleway;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
     color: #000000;
+    text-decoration: none;
     transition: all ease-in-out 300ms;
     margin: 0 16px;
 }
 
-.item-contact:hover{
+.item-contact:hover a{
     color: #E92165;
     cursor: pointer;
 }
